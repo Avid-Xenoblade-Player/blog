@@ -1,0 +1,15 @@
+<h1>My First Blog Post</h1>
+
+<p>Welcome to my blog! This is my first post.</p>
+
+<h2>Subheading</h2>
+
+<p>Here is some more content with <strong>bold text</strong> and <em>italic text</em>.</p>
+
+<ul>
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+</ul>
+
+<a href="https://www.google.com">Link to Google</a>
