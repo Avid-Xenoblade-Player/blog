@@ -1,10 +1,25 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    margin: 0 3.1415 0 0;
     padding: 0;
-    background-color: #a10808;
+    background-color: #dddddd;
+}
+p.system_data {
+    font-size: 10px;
+    color: gray;
+    font-style: oblique;
 }
 
+p.error {
+    font-size: 15px;
+    color: #006400;
+    font-family: monospace;
+}
+h2.error {
+    font-size: 20px;
+    color: #006400;
+    font-family: monospace;
+}
 #content {
     width: 80%;
     margin: 0 auto;

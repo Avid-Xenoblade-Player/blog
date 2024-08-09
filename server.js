@@ -20,6 +20,7 @@ app.get("/api/posts", (req, res) => {
       .filter((file) => path.extname(file) === ".txt")
       .sort();
     res.json({ posts: txtFiles });
+    console.log(txtFiles);
   });
 });
 

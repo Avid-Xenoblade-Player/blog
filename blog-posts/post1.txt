@@ -1,10 +1,10 @@
-<h1>My First Blog Post</h1>
+<h1>481-6BD-97 UNIT</h1>
 
-<p>Welcome to my blog! This is my first post.</p>
+<p class="system_data">USER: DR. RDH AELASIAN</p>
 
-<h2>Subheading</h2>
+<h2 class="error">Warning: TeBaCo-ISTP configuration incomplete </h2>
 
-<p>Here is some more content with <strong>bold text</strong> and <em>italic text</em>.</p>
+<p class="error">LOADING TeBaCo-ISTP...</p>
 
 <ul>
     <li>List item 1</li>
@@ -12,4 +12,4 @@
     <li>List item 3</li>
 </ul>
 
-<a href="https://www.google.com">Link to Google</a>
+<a href="http://localhost:3001/blog-posts/post2.txt">Next Post</a>
