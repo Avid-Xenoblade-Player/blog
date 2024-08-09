@@ -24,13 +24,14 @@ h2.error {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-    background-color: white;
+    background-color:#ffffff;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .post {
-    margin-bottom: 20px;
+    margin-bottom: 2px;
     padding: 20px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 2px solid #cccccc;
+    border-top: 3px dashed #dddddd;
     white-space: pre-wrap; /* This preserves whitespace and line breaks in the text files */
 }

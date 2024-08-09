@@ -6,10 +6,10 @@
 
 <p class="error">LOADING TeBaCo-ISTP...</p>
 
-<ul>
-    <li>List item 1</li>
-    <li>List item 2</li>
-    <li>List item 3</li>
-</ul>
-
-<a href="http://localhost:3001/blog-posts/post2.txt">Next Post</a>
+This project is classified for a reason. 
+The implications of what we're doing here are far-reaching.
+Governments, corporations, even the public – they're not ready for this. 
+But I am.
+I believe in the potential of this technology to change the world.
+To give sight to the blind, a voice to the voiceless.
+The risks are immense, but so are the rewards.
