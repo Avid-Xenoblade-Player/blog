@@ -55,8 +55,8 @@ h1 {
     color: #eeeeee;
     background-color: #333333;
     overflow: hidden;
-    border-right: .5em solid #ffffff; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
+    border-right: .5em solid #ffffff; /* Cursor rectangle */
+    /*white-space: nowrap; /* If uncommented, keeps content on one line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .10em; /* Adjust as needed */
     animation: 
