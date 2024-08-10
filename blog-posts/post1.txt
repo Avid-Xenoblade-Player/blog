@@ -4,12 +4,8 @@
 
 <h2 class="error">Warning: TeBaCo-ISTP configuration incomplete </h2>
 
-<p class="error">LOADING TeBaCo-ISTP...</p>
+<p class="typewriter">LOADING TeBaCo-ISTP...</p>
 
-This project is classified for a reason. 
-The implications of what we're doing here are far-reaching.
-Governments, corporations, even the public – they're not ready for this. 
-But I am.
-I believe in the potential of this technology to change the world.
-To give sight to the blind, a voice to the voiceless.
-The risks are immense, but so are the rewards.
+<p class="system_data">This text log is being run for me.</p>
+
+<p class="debug">Debug?</p>
