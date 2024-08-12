@@ -1,13 +1,13 @@
 var images = [
     {
-        src: "monkey.jpeg",
-        alt: "good monkey image",
+        src: "bsodmaker.png",
+        alt: "BLUE SCREEN OF DEATH !!",
         file: "post1.txt",
     },
 
     {
-        src: "monkey.jpeg",
-        alt: "better monkey image",
+        src: "bsodmaker (1).png",
+        alt: "BLUE SCREEN OF DEATH BRACKET ONE BRACKET !!",
         file: "post2.txt"
     }
 ];

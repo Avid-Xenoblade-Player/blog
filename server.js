@@ -9,7 +9,7 @@ const BLOG_POSTS_DIR = path.join(__dirname, "blog-posts");
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, "public")));
 
-const allowedFileExtensions = ['.txt', '.md', '.html', '.png']; // Ta-da! This defines the allowed file types. It lets me display .txt, .html, and .png. 
+const allowedFileExtensions = ['.txt', '.md', '.html']; // Ta-da! This defines the allowed file types. It lets me display .txt, .html, and .md. I wanted to add .jpeg and .png but it took too long to decode so nah. 
 // I also put in .md, just in case.
 
 // Endpoint to get the list of blog posts
@@ -36,8 +36,7 @@ app.get("/blog-posts/:filename", (req, res) => {
   const contentTypeMap = {
     '.txt': 'text/plain',
     '.md': 'text/markdown',
-    '.html': 'text/html',
-    '.png': 'image/png'
+    '.html': 'text/html'
     // If I need more types, I add it here.
   };
 
