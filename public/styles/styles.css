@@ -6,15 +6,27 @@ body {
 }
 p.system_data {
     font-size: 10px;
-    color: gray;
+    color: #808080;
     font-style: oblique;
+    background-color: #ffffff;
+    overflow: hidden;
+    border-right: .15em #ffffff;
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em;
+    animation: none;
+    /* Most of the above code is only there to override the typing animations below.
+      Sure, I could make it so that the typing is a class, but it's easier to use it as the
+      default, because I use it so much. Oh well. */
 }
 
 p.error {
     font-size: 15px;
     color: #006400;
     font-family: monospace;
+    letter-spacing: .14em; /* Adjust as needed */
 }
+
 h2.error {
     font-size: 20px;
     color: #006400;
