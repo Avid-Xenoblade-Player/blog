@@ -6,6 +6,4 @@
 
 <p class="typewriter">LOADING TeBaCo-ISTP...</p>
 
-<p class="system_data">This text log is being run for me.</p>
-
-<p class="debug">Debug?</p>
+<p>This text log is being hosted for me by the Penasen Royal Science Academy.</p>

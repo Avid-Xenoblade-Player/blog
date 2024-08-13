@@ -9,16 +9,7 @@ p.system_data {
     color: #808080;
     font-style: oblique;
     background-color: #ffffff;
-    overflow: hidden;
-    border-right: .15em #ffffff;
-    white-space: nowrap; 
-    margin: 0 auto; 
-    letter-spacing: .15em;
-    animation: none;
-    /* Most of the above code is only there to override the typing animations below.
-      Sure, I could make it so that the typing is a class, but it's easier to use it as the
-      default, because I use it so much. Oh well. */
-}
+    }
 
 p.error {
     font-size: 15px;
@@ -48,7 +39,7 @@ h2.error {
     white-space: pre-wrap; /* This preserves whitespace and line breaks in the text files */
 }
 
-p {
+p.typewriter {
     color: #eeeeee;
     background-color: #333333;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -76,6 +67,14 @@ h1 {
         blink-caret .75s step-end infinite;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
   /* The typing effect */
   @keyframes typing {
     from { width: 0; }
@@ -87,3 +86,4 @@ h1 {
     from, to { border-color: transparent }
     50% { border-color: #006400; }
   }
+
