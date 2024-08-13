@@ -7,3 +7,5 @@
 <p class="typewriter">LOADING TeBaCo-ISTP...</p>
 
 <p>This text log is being hosted for me by the Penasen Royal Science Academy.</p>
+
+<a href="post1.html">See more.</a>

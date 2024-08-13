@@ -67,13 +67,12 @@ h1 {
         blink-caret .75s step-end infinite;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+
+td {
+  background-color: #006400;
+  padding: 0px 5px;
+  margin: auto;
 }
-
-
 
   /* The typing effect */
   @keyframes typing {
@@ -87,3 +86,33 @@ ul {
     50% { border-color: #006400; }
   }
 
+
+  /* The navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+.navbar a {
+  text-decoration: double;
+  float: left;
+  display: block;
+  color: #feebee;
+  text-align: center;
+  padding: 16px;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #abcdef;
+  color: #123456; /* haha funny number */
+}
+
+/* Main content */
+.main {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
