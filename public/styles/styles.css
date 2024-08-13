@@ -2,7 +2,7 @@ body {
     font-family: "Atkinson Hyperlegible", sans-serif;
     margin: 0 3.1415 0 0;
     padding: 0;
-    background-color: #dddddd;
+    background-image: url(monkey.jpeg);
 }
 p.system_data {
     font-size: 10px;
@@ -18,17 +18,11 @@ p.error {
     letter-spacing: .14em; /* Adjust as needed */
 }
 
-h2.error {
-    font-size: 20px;
-    color: #006400;
-    font-family: monospace;
-}
 #content {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     padding: 20px;
     background-color:#ffffff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .post {
@@ -117,4 +111,8 @@ a {
 /* Main content */
 .main {
   margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+
+.preview {
+  font-size: 80%; /* Hopefully it makes the font go at 80% the size of the parent size. */
 }

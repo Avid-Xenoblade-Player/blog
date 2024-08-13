@@ -1,11 +1,11 @@
-<h1>481-6BD-97 UNIT</h1>
+<h1 class="preview">481-6BD-97 UNIT</h1>
 
-<p class="system_data">USER: DR. RDH AELASIAN</p>
+<p class="system_data preview">USER: DR. RDH AELASIAN</p>
 
-<h2 class="error">Warning: TeBaCo-ISTP configuration incomplete </h2>
+<p class="error preview">Warning: TeBaCo-ISTP configuration incomplete </p>
 
-<p class="typewriter">LOADING TeBaCo-ISTP...</p>
+<p class="typewriter preview">LOADING TeBaCo-ISTP...</p>
 
-<p>This text log is being hosted for me by the Penasen Royal Science Academy.</p>
+<p class="preview">This text log is being hosted for me by the Penasen Royal Science Academy.</p>
 
-<a href="post1.html">See more.</a>
+<a href="post1.html" preview>See more.</a>
