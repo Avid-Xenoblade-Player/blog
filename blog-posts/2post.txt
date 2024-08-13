@@ -1,3 +1,11 @@
 <h1>481-6BD-97 UNIT UPDATE</h1>
-<br>Morning!
+<br> 
 
+<p>Welcome to the 481-6BD-97 official customer service page! <br> </p>
+<table> <tr> 
+<td> <p> Today, we have a </p> </td>
+<td> <p class="shaky">special surprise</p> </td>
+<td> <p>for all existing customers! </p> </td>
+</tr> </table>
+
+<p>All current 481-6BD-97 users, please click</p> <a href="post2.html">here.</a>

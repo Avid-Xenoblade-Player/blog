@@ -2,12 +2,58 @@ body {
     font-family: "Atkinson Hyperlegible", sans-serif;
     margin: 0 3.1415 0 0;
     padding: 0;
-    background-attachment: fixed;
-    background-size: cover;
-    animation: 
-      move 3.5s steps(40, end);
-    background-image: url(bsodmaker\ \(1\).png);
+    }
+
+body.home {
+  background-attachment: fixed;
+  background-size: cover;
+  animation: 
+    move 3.5s steps(40, end);
+  background-image: url(dontlookthroughmycodeandfindthisimage.png);
 }
+
+body.one {
+  background-attachment: fixed;
+  background-size: cover;
+  animation: 
+    move 3.5s steps(50, end);
+  background-image: url(monkey.jpeg);
+}
+
+body.two {
+  border-radius: 50%;
+  background-image: radial-gradient(circle at center, rgba(255, 0, 0, 1) 0%, rgba(255, 0, 0, 0) 100%),
+                     radial-gradient(circle at center, rgba(0, 255, 0, 1) 0%, rgba(0, 255, 0, 0) 100%),
+                     radial-gradient(circle at center, rgba(0, 0, 255, 1) 0%, rgba(0, 0, 255, 0) 100%);
+  background-size: 0%, 50%, 100%;
+  background-repeat: repeat;
+  animation: outwardFlow 5s infinite;
+}
+
+@keyframes outwardFlow {
+  0% {
+    background-size: 0%, 50%, 100%;
+  }
+  16% {
+    background-size: 50%, 100%, 150%;
+  }
+  33% {
+    background-size: 100%, 150%, 200%;
+  }
+  50% {
+    background-size: 150%, 200%, 250%;
+  }
+  63% {
+    background-size: 100%, 150%, 200%;
+  }
+  84% {
+    background-size: 50%, 100%, 150%;
+  }
+  100% {
+    background-size: 0%, 50%, 100%;  
+  }
+}
+
 
 @keyframes move {
   0% {
@@ -18,31 +64,41 @@ body {
   }
 }
 
+p {
+  color: #ffeffe;
+}
+
 p.system_data {
     font-size: 10px;
-    color: #808080;
+    color: #f8f8f8;
     font-style: oblique;
-    background-color: #ffffff;
     }
 
 p.error {
     font-size: 15px;
-    color: #006400;
+    color: #fffeef;
     font-family: monospace;
     letter-spacing: .14em; /* Adjust as needed */
 }
 
-#content {
+div.content {
     width: 85%;
-    margin: 0 auto;
+    margin: 100px auto;
     padding: 20px;
-    background-color:#ffffff;
+    background-color:#333333;
+}
+
+div.postcontent {
+    width: 95%;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #333333;
 }
 
 .post {
     margin-bottom: 2px;
     padding: 20px;
-    border-bottom: 2px solid #cccccc;
+    border-bottom: 3px dashed #bbbbbb;
     border-top: 3px dashed #dddddd;
     white-space: pre-wrap; /* This preserves whitespace and line breaks in the text files */
 }
@@ -77,12 +133,17 @@ h1 {
 
 
 a {
-  color: #ffeef0;
-  background-color: #006400;
+  color: #62ff00;
+  background-color: #33333e;
+  padding: 0px 5px;
+}
+
+a:hover {
+  color: #62ff88;
+  background-color: #333322;
   padding: 0px 5px;
   margin: auto;
 }
-
   /* The typing effect */
   @keyframes typing {
     from { width: 0; }
@@ -103,6 +164,7 @@ a {
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
+  border-bottom: 8px solid #006400;
 }
 
 /* Links inside the navbar */
@@ -125,4 +187,39 @@ a {
 /* Main content */
 .main {
   margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+
+.shaky {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.shaky:hover {
+  color: #7fff00;
+}
+
+@keyframes shake {
+  0% { transform: translate(.3px, -.1px) rotate(0deg); }
+  10% { transform: translate(-.1px, -.3px) rotate(-1deg); }
+  20% { transform: translate(-.3px, 0px) rotate(1deg); }
+  30% { transform: translate(.3px, .2px) rotate(0deg); }
+  40% { transform: translate(0px, -.1px) rotate(1deg); }
+  50% { transform: translate(-.1px, .1px) rotate(-1deg); }
+  60% { transform: translate(-3px, .1px) rotate(0deg); }
+  70% { transform: translate(.2px, .1px) rotate(-1deg); }
+  80% { transform: translate(-.1px, -.1px) rotate(1deg); }
+  90% { transform: translate(.1px, .2px) rotate(0deg); }
+  100% { transform: translate(.1px, -.2px) rotate(-1deg); }
+}
+
+p.angryerror {
+  font-size: 15px;
+  color: #ff0051;
+  font-family: monospace;
+  letter-spacing: .14em; /* Adjust as needed */
+  font-weight: bold;
+}
+
+p.cwisaesritam {
+  letter-spacing: -2px;
 }
