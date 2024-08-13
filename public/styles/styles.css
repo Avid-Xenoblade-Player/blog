@@ -68,7 +68,8 @@ h1 {
 }
 
 
-td {
+a {
+  color: #ffeef0;
   background-color: #006400;
   padding: 0px 5px;
   margin: auto;
@@ -90,7 +91,7 @@ td {
   /* The navigation bar */
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: #333333;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
@@ -102,6 +103,7 @@ td {
   float: left;
   display: block;
   color: #feebee;
+  background-color: #333333;
   text-align: center;
   padding: 16px;
 }
