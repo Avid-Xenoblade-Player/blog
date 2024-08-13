@@ -2,8 +2,22 @@ body {
     font-family: "Atkinson Hyperlegible", sans-serif;
     margin: 0 3.1415 0 0;
     padding: 0;
-    background-image: url(monkey.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    animation: 
+      move 3.5s steps(40, end);
+    background-image: url(bsodmaker\ \(1\).png);
 }
+
+@keyframes move {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
 p.system_data {
     font-size: 10px;
     color: #808080;
@@ -111,8 +125,4 @@ a {
 /* Main content */
 .main {
   margin-top: 30px; /* Add a top margin to avoid content overlay */
-}
-
-.preview {
-  font-size: 80%; /* Hopefully it makes the font go at 80% the size of the parent size. */
 }
