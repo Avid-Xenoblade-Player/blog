@@ -39,6 +39,11 @@ body.three {
   animation: outwardFlow 5s infinite;
 }
 
+body.four {
+  background-image: linear-gradient(#000000, #ffffff);
+  animation: outwardFlow 10s infinite;
+}
+
 body.codes {
   border-radius: 10%;
   background-image: radial-gradient(circle at center, #006400 0%, #00640000 100%),
