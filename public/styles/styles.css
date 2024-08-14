@@ -22,11 +22,20 @@ body.one {
 
 body.two {
   border-radius: 50%;
-  background-image: radial-gradient(circle at center, rgba(255, 0, 0, 1) 0%, rgba(255, 0, 0, 0) 100%),
-                     radial-gradient(circle at center, rgba(0, 255, 0, 1) 0%, rgba(0, 255, 0, 0) 100%),
-                     radial-gradient(circle at center, rgba(0, 0, 255, 1) 0%, rgba(0, 0, 255, 0) 100%);
+  background-image: radial-gradient(circle at center, #ff0000 0%, rgba(255, 0, 0, 0) 100%),
+                     radial-gradient(circle at center, #00ff00 0%, rgba(0, 255, 0, 0) 100%),
+                     radial-gradient(circle at center, #0000ff 0%, rgba(0, 0, 255, 0) 100%);
   background-size: 0%, 50%, 100%;
   background-repeat: repeat;
+  animation: outwardFlow 5s infinite;
+}
+
+body.three {
+  border-radius: 70%;
+  background-image: radial-gradient(circle at center, #006400 0%, #80400000 100%),
+                  radial-gradient(circle at top left, #333333 0%, #66996600 100%),
+                  radial-gradient(circle at bottom right, #0000ff 0%, #0066cc00 100%);
+  /* Remove animation: outwardFlow 5s infinite; */
   animation: outwardFlow 5s infinite;
 }
 
@@ -156,17 +165,6 @@ a:hover {
     50% { border-color: #006400; }
   }
 
-
-  /* The navigation bar */
-.navbar {
-  overflow: hidden;
-  background-color: #333333;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
-  border-bottom: 8px solid #006400;
-}
-
 /* Links inside the navbar */
 .navbar a {
   text-decoration: double;
@@ -190,6 +188,7 @@ a:hover {
 }
 
 .shaky {
+  position: inherit;
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
@@ -222,4 +221,14 @@ p.angryerror {
 
 p.cwisaesritam {
   letter-spacing: -2px;
+}
+
+ /* The navigation bar */
+ .navbar {
+  overflow: hidden;
+  background-color: #333333;
+  position: sticky; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  border-bottom: 8px solid #006400;
 }
