@@ -40,8 +40,14 @@ body.three {
 }
 
 body.four {
-  background-image: linear-gradient(#000000, #ffffff);
+  background-image: radial-gradient(circle at center, #000000 0%, #00000000 100%),
+                    radial-gradient(circle at center, #ffffff 0%, #ffffff00 100%),
+                    radial-gradient(circle at center, #123456 0%, #12345600 100%);
   animation: outwardFlow 10s infinite;
+}
+
+body.five {
+  background-image: linear-gradient(#980000, #000000, #000000);
 }
 
 body.codes {
@@ -268,8 +274,42 @@ p.cwisaesritam {
 /* The progress bar (scroll indicator) */
 .progress-bar {
   height: 8px;
-  background: #04AA6D;
+  background: #b5005b;
   width: 0%;
+  animation: progress 30s infinite;
+}
+
+@keyframes progress {
+  0% {
+    background-color: #b5005b;
+  }
+  10% {
+    background-color: #ff0051;
+  }
+  20% {
+    background-color: #ff0000;
+  }
+  30% {
+    background-color: #ffa200;
+  }
+  40% {
+    background-color: #eaff00;
+  }
+  50% {
+    background-color: #00ff00;
+  }
+  60% {
+    background-color: #04aa6d;
+  }
+  70% {
+    background-color: #123456;
+  }
+  80% {
+    background-color: #640046;
+  }
+  90% {
+    background-color: #9400d3;
+  }
 }
 
 img.fixed {
