@@ -39,6 +39,15 @@ body.three {
   animation: outwardFlow 5s infinite;
 }
 
+body.codes {
+  border-radius: 10%;
+  background-image: radial-gradient(circle at center, #006400 0%, #00640000 100%),
+                  radial-gradient(circle at top left, #333333 0%, #33333300 100%),
+                  radial-gradient(circle at bottom right, #0000ff 0%, #0000ff00 100%);
+  /* Remove animation: outwardFlow 5s infinite; */
+  animation: outwardFlow 5s infinite;
+}
+
 @keyframes outwardFlow {
   0% {
     background-size: 0%, 50%, 100%;
@@ -190,26 +199,35 @@ a:hover {
 .shaky {
   position: relative;
   z-index: 0;
-  animation: shake 0.5s;
-  animation-iteration-count: infinite;
+  animation: shake 0.5s infinite;
+}
+
+.shaky_delay {
+  position: relative;
+  z-index: 0;
+  animation: shake 0.5s var(--delay) infinite;
 }
 
 .shaky:hover {
   color: #7fff00;
 }
 
+.shaky_delay:hover {
+  color: #7fff00;
+}
+
 @keyframes shake {
-  0% { transform: translate(.3px, -.1px) rotate(0deg); }
-  10% { transform: translate(-.1px, -.3px) rotate(-1deg); }
-  20% { transform: translate(-.3px, 0px) rotate(1deg); }
-  30% { transform: translate(.3px, .2px) rotate(0deg); }
-  40% { transform: translate(0px, -.1px) rotate(1deg); }
-  50% { transform: translate(-.1px, .1px) rotate(-1deg); }
-  60% { transform: translate(-3px, .1px) rotate(0deg); }
-  70% { transform: translate(.2px, .1px) rotate(-1deg); }
-  80% { transform: translate(-.1px, -.1px) rotate(1deg); }
-  90% { transform: translate(.1px, .2px) rotate(0deg); }
-  100% { transform: translate(.1px, -.2px) rotate(-1deg); }
+  0% { transform: translate(3px, -1px) rotate(0deg); }
+  10% { transform: translate(-1px, -3px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(0px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 1px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(2px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
 p.angryerror {
@@ -232,5 +250,24 @@ p.cwisaesritam {
   z-index: 1;
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
-  border-bottom: 8px solid #006400;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+  margin-top: 55px;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #04AA6D;
+  width: 0%;
+}
+
+img.fixed {
+  height: 80%;
+  width: 80%;
 }
