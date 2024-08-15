@@ -1,194 +1,224 @@
-body {
-    font-family: "Atkinson Hyperlegible", sans-serif;
-    margin: 0 3.1415 0 0;
-    padding: 0;
-    }
-
-body.home {
-  background-attachment: fixed;
-  background-size: cover;
-  animation: 
-    move 3.5s steps(40, end);
-  background-image: url(dontlookthroughmycodeandfindthisimage.png);
+a { /* Link styling */
+  color: #62ff00;
+  background-color: #33333e; 
+  padding: 0px 5px;
 }
 
-body.one {
+a:hover { /* Change appearance on hover */
+  color: #62ff88;
+  background-color: #333322;
+  padding: 0px 5px;
+}
+
+body { /* Global body styling */
+    font-family: "Atkinson Hyperlegible", sans-serif; /* This is just a font I like. */
+    margin: 0 3.1415 0 0; /* Margin to the left. */
+    padding: 0; /* No padding. */
+    }
+body.home { /* Body for homepage */
+    background-attachment: fixed; /* Image doesn't move */
+    background-size: cover; /* Fill the whole page */
+    animation: 
+    fade 3.5s steps(40, end); /* Fade in for 3.5 seconds */
+    background-image: url(dontlookthroughmycodeandfindthisimage.png); 
+  }
+body.codes { /* Code page stylings */
+  border-radius: 10%; /* Small radius */
+  background-image: radial-gradient(circle at center, #006400 0%, #00640000 100%), /* Fade to nothing, so the other colors appear */
+                  radial-gradient(circle at top left, #333333 0%, #33333300 100%),
+                  radial-gradient(circle at bottom right, #0000ff 0%, #0000ff00 100%);
+  animation: outwardFlow 5s infinite; /* Move infinitely, then repeat every 5 seconds */
+}
+/* From here on in, each post has a different background animation. Looks cool. */
+body.one { 
   background-attachment: fixed;
   background-size: cover;
   animation: 
-    move 3.5s steps(50, end);
-  background-image: url(monkey.jpeg);
+    fade 3.5s steps(50, end); /* Fades in from the start over a 3.5 second period, then stops */
+  background-image: url(monkey.jpeg); /* monkey image */ 
 }
 
 body.two {
-  border-radius: 50%;
-  background-image: radial-gradient(circle at center, #ff0000 0%, rgba(255, 0, 0, 0) 100%),
-                     radial-gradient(circle at center, #00ff00 0%, rgba(0, 255, 0, 0) 100%),
-                     radial-gradient(circle at center, #0000ff 0%, rgba(0, 0, 255, 0) 100%);
-  background-size: 0%, 50%, 100%;
-  background-repeat: repeat;
-  animation: outwardFlow 5s infinite;
+  border-radius: 50%; /* Medium size */
+  background-image: radial-gradient(circle at center, #ff0000 0%, #ff000000 100%),
+                     radial-gradient(circle at center, #00ff00 0%, #00ff0000 100%),
+                     radial-gradient(circle at center, #0000ff 0%, #0000ff00 100%); /* Create three circle colours */
+  background-size: 0%, 50%, 100%; /* Assign them sizes */
+  background-repeat: repeat; /* Repeat the image infinitely */
+  animation: outwardFlow 5s infinite; /* animate forever, repeating every five seconds */
 }
 
 body.three {
-  border-radius: 70%;
-  background-image: radial-gradient(circle at center, #006400 0%, #80400000 100%),
+  border-radius: 70%; /* Slightly larger gradient */
+  background-image: radial-gradient(circle at center, #006400 0%, #80400000 100%), /* Three gradients */
                   radial-gradient(circle at top left, #333333 0%, #66996600 100%),
                   radial-gradient(circle at bottom right, #0000ff 0%, #0066cc00 100%);
-  /* Remove animation: outwardFlow 5s infinite; */
   animation: outwardFlow 5s infinite;
 }
 
 body.four {
+   /* No radius, defaulting to 100% here. */
   background-image: radial-gradient(circle at center, #000000 0%, #00000000 100%),
                     radial-gradient(circle at center, #ffffff 0%, #ffffff00 100%),
                     radial-gradient(circle at center, #123456 0%, #12345600 100%);
   animation: outwardFlow 10s infinite;
 }
 
+
 body.five {
-  background-image: linear-gradient(#980000, #000000, #000000);
+  background-image: linear-gradient(#980000, #000000, #000000); /* Just a simple downwards gradient. Two #000000 so that it starts 1/3 of the way up the page rather than halfway. */
 }
 
-body.codes {
-  border-radius: 10%;
-  background-image: radial-gradient(circle at center, #006400 0%, #00640000 100%),
-                  radial-gradient(circle at top left, #333333 0%, #33333300 100%),
-                  radial-gradient(circle at bottom right, #0000ff 0%, #0000ff00 100%);
-  /* Remove animation: outwardFlow 5s infinite; */
-  animation: outwardFlow 5s infinite;
-}
-
-@keyframes outwardFlow {
+@keyframes outwardFlow { /* Gradient moving animation. */
   0% {
-    background-size: 0%, 50%, 100%;
-  }
+    background-size: 0%, 50%, 100%; /* Start normally. */
+  } 
   16% {
-    background-size: 50%, 100%, 150%;
+    background-size: 50%, 100%, 150%; /* Move to right */
   }
   33% {
-    background-size: 100%, 150%, 200%;
+    background-size: 100%, 150%, 200%; /* Move to right */
   }
   50% {
-    background-size: 150%, 200%, 250%;
+    background-size: 150%, 200%, 250%; /* Move to right */
   }
   63% {
-    background-size: 100%, 150%, 200%;
+    background-size: 100%, 150%, 200%; /* Move back left */
   }
   84% {
-    background-size: 50%, 100%, 150%;
+    background-size: 50%, 100%, 150%; /* Move back left */
   }
   100% {
-    background-size: 0%, 50%, 100%;  
+    background-size: 0%, 50%, 100%;  /* Back to start. */
   }
 }
 
-
-@keyframes move {
+@keyframes fade {
   0% {
-    opacity: 0%;
+    opacity: 0%; /* At the start, invisible. */
   }
   100% {
-    opacity: 100%;
+    opacity: 100%; /* At the end, fully visible. */
   }
 }
 
-p {
-  color: #ffeffe;
+button {
+  background-color: #333333;
+  color: #feebee;
+  font-family: "Atkinson Hypereligible", sans-serif;
+  height: 50px;
+  width: 100px;
+  font-size: 16px;
 }
 
-p.system_data {
-    font-size: 10px;
-    color: #f8f8f8;
-    font-style: oblique;
-    }
-
-p.error {
-    font-size: 15px;
-    color: #fffeef;
-    font-family: monospace;
-    letter-spacing: .14em; /* Adjust as needed */
-}
-
-div.content {
-    width: 85%;
+div.content { /* Div for .txt posts */
+    width: 85%; 
     margin: 100px auto;
     padding: 20px;
-    background-color:#333333;
+    background-color: #333333;
 }
 
-div.postcontent {
+div.postcontent { /* Div for .html pages */
     width: 95%;
     margin: 100px auto;
     padding: 20px;
     background-color: #333333;
 }
 
-.post {
-    margin-bottom: 2px;
-    padding: 20px;
-    border-bottom: 3px dashed #bbbbbb;
-    border-top: 3px dashed #dddddd;
-    white-space: pre-wrap; /* This preserves whitespace and line breaks in the text files */
+h1 {
+    text-align: center;
+    text-decoration: overline; /* Overline is such a cool decoration, so I put it in. It's only visible during the typing, however. */
+    color: #eeeeee;
+    background-color: #333333;
+    overflow: hidden; /* Keeps it hidden before it is 'typed'. */
+    border-right: .5em solid #ffffff; /* Cursor rectangle */
+    /*white-space: nowrap; If uncommented, keeps content on one line. Optional. */
+    margin: 0 auto; /* Scrolling effect */
+    letter-spacing: .10em;
+    animation: 
+        typing 1.9s steps(40, end), /* Typing animation */
+        blink-caret .75s step-end infinite; /* Cursor animation */
 }
+
+
+img.fixed { /* This is only for the image gallery. */
+  height: 80%; 
+  width: 80%;
+}
+
+p {
+  color: #ffeffe;
+}
+
+p.error {
+  font-size: 15px;
+  color: #fffeef;
+  font-family: monospace;
+  letter-spacing: .14em;
+}
+
+p.angryerror { /* Pink and bold. */
+  font-size: 15px;
+  color: #ff0051;
+  font-family: monospace;
+  letter-spacing: .14em;
+  font-weight: bold;
+}
+
+p.cwisaesritam {
+  letter-spacing: -2px; /* Pushes the letters together to make it look cursive. */
+}
+
+p.system_data {
+    font-size: 10px;
+    color: #f8f8f8;
+    font-style: oblique; /* Italics, but preserves font size. */
+    }
 
 p.typewriter {
     color: #eeeeee;
     background-color: #333333;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid #006400; /* The typwriter cursor */
+    overflow: hidden;
+    border-right: .15em solid #006400; /* Cursor */
     white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
+    margin: 0 auto;
+    letter-spacing: .15em;
     animation:
       typing 3.5s steps(40, end),
       blink-caret .75s step-end infinite;
   }
-  
-h1 {
-    text-align: center;
-    text-decoration: overline;
-    color: #eeeeee;
-    background-color: #333333;
-    overflow: hidden;
-    border-right: .5em solid #ffffff; /* Cursor rectangle */
-    /*white-space: nowrap; /* If uncommented, keeps content on one line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .10em; /* Adjust as needed */
-    animation: 
-        typing 1.9s steps(40, end), 
-        blink-caret .75s step-end infinite;
-}
 
-
-a {
-  color: #62ff00;
-  background-color: #33333e;
-  padding: 0px 5px;
-}
-
-a:hover {
-  color: #62ff88;
-  background-color: #333322;
-  padding: 0px 5px;
-  margin: auto;
-}
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #006400; }
+   /* The typing effect */
+   @keyframes typing {
+    from { width: 0; } /* At the start, no width. */
+    to { width: 100%; } /* At the end, full width. */
   }
 
-/* Links inside the navbar */
+   /* The typewriter cursor effect */
+   @keyframes blink-caret {
+    from, to { border-color: transparent } /* At start and end of animation, invisible */
+    50% { border-color: #006400; } /* Halfway through, visible. */
+  }
+
+/* Main content */
+.main {
+  margin-top: 30px; /* Adds a top margin to avoid content overlay */
+}
+
+/* The navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333333;
+  position: sticky; /* Stays at top when scrolled */ 
+  z-index: 1; /* Move to front layer. */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+/* Link styling */
 .navbar a {
-  text-decoration: double;
-  float: left;
+  text-decoration: double; /* I'd like to have it work, but this doesn't work. So it's useless. */
+  float: left; /* Stay on the left. */
   display: block;
   color: #feebee;
   background-color: #333333;
@@ -199,87 +229,35 @@ a:hover {
 /* Change background on mouse-over */
 .navbar a:hover {
   background: #abcdef;
-  color: #123456; /* haha funny number */
+  color: #123456; /* Funny number for hex. */
 }
 
-/* Main content */
-.main {
-  margin-top: 30px; /* Add a top margin to avoid content overlay */
+.post {
+    margin-bottom: 2px;
+    padding: 20px;
+    border-bottom: 3px dashed #bbbbbb; /* Dashes look like an old receipt. */
+    border-top: 3px dashed #dddddd; /* Different color to look nice. */
+    white-space: pre-wrap; /* This preserves whitespace and line breaks in the text files */
 }
 
-.shaky {
-  position: relative;
-  z-index: 0;
-  animation: shake 0.5s infinite;
-}
-
-.shaky_delay {
-  position: relative;
-  z-index: 0;
-  animation: shake 0.5s var(--delay) infinite;
-}
-
-.shaky:hover {
-  color: #7fff00;
-}
-
-.shaky_delay:hover {
-  color: #7fff00;
-}
-
-@keyframes shake {
-  0% { transform: translate(3px, -1px) rotate(0deg); }
-  10% { transform: translate(-1px, -3px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(0px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 1px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(2px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
-
-p.angryerror {
-  font-size: 15px;
-  color: #ff0051;
-  font-family: monospace;
-  letter-spacing: .14em; /* Adjust as needed */
-  font-weight: bold;
-}
-
-p.cwisaesritam {
-  letter-spacing: -2px;
-}
-
- /* The navigation bar */
- .navbar {
-  overflow: hidden;
-  background-color: #333333;
-  position: sticky; 
-  z-index: 1;
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
-}
-
-/* The progress container (grey background) */
-.progress-container {
-  width: 100%;
-  height: 8px;
-  background: #ccc;
-  margin-top: 55px;
-}
-
-/* The progress bar (scroll indicator) */
+/* Scroll bar. */
 .progress-bar {
   height: 8px;
-  background: #b5005b;
+  background: #b5005b; /* By default, a pinkish bar. */
   width: 0%;
   animation: progress 30s infinite;
 }
 
-@keyframes progress {
+
+/* Background of scroll bar. */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #cccccc;
+  margin-top: 55px; /* Moves the bar below the navbar so it's not blocked, but still at the top. */
+}
+
+@keyframes progress { /* Different colors every few seconds. Rainbow, yay! */
   0% {
     background-color: #b5005b;
   }
@@ -312,7 +290,36 @@ p.cwisaesritam {
   }
 }
 
-img.fixed {
-  height: 80%;
-  width: 80%;
+.shaky {
+  position: relative; /* Layer controls */
+  z-index: 0; /* Move behind the navbar. */
+  animation: shake 0.5s infinite; 
+}
+
+.shaky:hover {
+  color: #7fff00; /* When hovered, change color. */
+}
+
+.shaky_delay {
+  position: relative;
+  z-index: 0; /* Same as .shaky. */
+  animation: shake 0.5s var(--delay) infinite; /* Use a combination of javascript and html to make each letter shake individually at a different offset. */
+}
+
+.shaky_delay:hover {
+  color: #7fff00; /* Same as .shaky. */
+}
+
+@keyframes shake { /* Animation for moving. */
+  0% { transform: translate(3px, -1px) rotate(0deg); }
+  10% { transform: translate(-1px, -3px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(0px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 1px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(2px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
